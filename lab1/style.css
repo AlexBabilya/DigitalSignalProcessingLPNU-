@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+#col2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 45px;
+}
+
+#col2 label,
+#col2 input,
+#col2 button {
+    margin-bottom: 10px; 
+}
+
+input {
+    text-align: center;
+}

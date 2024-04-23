@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fourier Series Visualization</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/1.1.1/chartjs-plugin-zoom.min.js"></script>
+</head>
+<body style="background-color: #ddddff94">
+<div>
+    <h1>Бабіля Олександр Лабораторна номер 1.</h1>
+</div>
+    <div class="container">
+        <div id="col1" class="column">
+            <canvas id="myChart" width="1200" height="600"></canvas>
+        </div>
+        <div id="col2" class="column">
+            <img src="function.jpg" alt="Опис зображення">
+            <div style="margin-top: 20px;">
+                <label for="from">Від:</label>
+                <input type="number" id="from" value="-1" step="1">
+                <label for="from">π</label>
+            </div>
+            
+            <div>
+                <label for="to">До:</label>
+                <input type="number" id="to" value="4" step="1">
+                <label for="from">π</label>
+            </div>
+            
+            <div>
+                <label for="N">N:</label>
+                <input type="number" id="N" value="5" min="1">
+            </div>
+            
+            <div>
+                <button onclick="updateChart()">Оновити</button>
+                <button onclick="saveToFile()">Зберегти у файл</button>
+            </div>
+
+            <label style="margin-top: 50px;">Середня абсолютна похибка:</label>
+            <label id="average"></label>
+            <label style="margin-top: 50px;">Середня квадратична похибка:</label>
+            <label id="averageSquare"></label>
+        </div>
+    </div>    
+    <script src="main.js"></script>
+</body>
+</html>
